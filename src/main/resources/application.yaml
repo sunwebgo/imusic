@@ -1,0 +1,22 @@
+#配置端口号
+server:
+  port: 8090
+
+#配置数据源和数据库的相应信息
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.26.135:3306/music?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xu.123456
+  #    配置文件上传大小限制
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+#配置mybatis-plus的日志文件
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
